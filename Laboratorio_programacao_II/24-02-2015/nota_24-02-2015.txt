@@ -1,0 +1,6 @@
+nota aula 
+
+
+1- fazer um programa que a partir de 2 valores digitados pelo usuario faça  4 operacoes aritimeticas e mostre na tela o resulta.
+
+2- fazer um programa que caucule a area do perimetro de um circulo a partir do raio digitado pelo usuario
