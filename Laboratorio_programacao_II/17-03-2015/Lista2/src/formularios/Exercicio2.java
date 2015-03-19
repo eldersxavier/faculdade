@@ -6,18 +6,20 @@
 
 package formularios;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author 1323594
  */
 public class Exercicio2 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Exercicio2
-     */
+    static DefaultTableModel modelo = new DefaultTableModel();
+    
     public Exercicio2() {
         initComponents();
-        jLSTATUS.setVisible(false);
+        setColunasTabela();
+        jTabela.setModel(modelo);        
     }
 
     /**
@@ -30,13 +32,14 @@ public class Exercicio2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        jTabela = new javax.swing.JTable();
+        jBEXECUTAR = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jBADICIONAR = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"1", null, null, null, null, null, null},
                 {"2", null, null, null, null, null, null},
@@ -58,11 +61,23 @@ public class Exercicio2 extends javax.swing.JFrame {
                 "ID", "ALUNO", "NOTA 1", "NOTA 2", "AULAS MINISTRADAS", "AULAS ASSISTIDAS", "STATUS"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTabela);
 
-        jButton1.setText("EXECUTAR");
+        jBEXECUTAR.setText("EXECUTAR");
+        jBEXECUTAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEXECUTARActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("DISCIPLINA: CÁUCULO");
+
+        jBADICIONAR.setText("ADICIONAR");
+        jBADICIONAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBADICIONARActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,32 +87,49 @@ public class Exercicio2 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 626, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(276, 276, 276)
-                                .addComponent(jButton1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel1)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addGap(0, 569, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jBADICIONAR)
+                .addGap(53, 53, 53)
+                .addComponent(jBEXECUTAR)
+                .addGap(243, 243, 243))
         );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBADICIONAR, jBEXECUTAR});
+
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBEXECUTAR)
+                    .addComponent(jBADICIONAR))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBADICIONARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBADICIONARActionPerformed
+        String linha[] = {String.valueOf(modelo.getRowCount()+1),"","","","","",""};
+        if(modelo.getRowCount() < 16){
+        modelo.addRow(linha);
+        }
+    }//GEN-LAST:event_jBADICIONARActionPerformed
+
+    private void jBEXECUTARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXECUTARActionPerformed
+        executar();
+    }//GEN-LAST:event_jBEXECUTARActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,11 +167,46 @@ public class Exercicio2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jBADICIONAR;
+    private javax.swing.JButton jBEXECUTAR;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTabela;
     // End of variables declaration//GEN-END:variables
-
-
+private void setColunasTabela(){
+        modelo.addColumn("ID");
+        modelo.addColumn("NOME");
+        modelo.addColumn("NOTA1");
+        modelo.addColumn("NOTA2");
+        modelo.addColumn("AULAS MINISTRADAS");
+        modelo.addColumn("AULAS ASSISTIDAS");
+        modelo.addColumn("STATUS");        
+    }
+    
+    private void executar(){
+    float nota1,nota2,ministradas,assistidas,result;
+    String status= "APROVADO";
+    boolean verifica = true;
+    
+    for(int i = 0; i <modelo.getRowCount(); i++ ){
+        nota1 = Float.parseFloat((String) modelo.getValueAt(i, 2));
+        nota2 = Float.parseFloat((String) modelo.getValueAt(i, 3));
+        ministradas = Float.parseFloat((String) modelo.getValueAt(i, 4));
+        assistidas = Float.parseFloat((String) modelo.getValueAt(i, 5));        
+        result = (nota1 + nota2) / 2;
+        if(result <6){
+            verifica = false;
+        }
+        result = (float) (ministradas * 0.75);
+        if(assistidas < result){ 
+            verifica = false;
+        }
+        if(verifica == false){
+            status= "REPROVADO";
+        }
+        modelo.setValueAt(status,i, 6);        
+    }
+    
+    //modelo.setValueAt(String.valueOf(modelo.getRowCount()), 0, 0);
+    }
 }
