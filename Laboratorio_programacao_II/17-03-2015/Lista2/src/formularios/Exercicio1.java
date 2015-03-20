@@ -52,8 +52,6 @@ public class Exercicio1 extends javax.swing.JFrame {
         jBCE = new javax.swing.JButton();
         jBPONTO = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jTVISOR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTVISORActionPerformed(evt);

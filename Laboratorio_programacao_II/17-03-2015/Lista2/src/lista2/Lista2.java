@@ -6,6 +6,8 @@
 
 package lista2;
 
+import formularios.Menu;
+
 /**
  *
  * @author 1323594
@@ -17,6 +19,9 @@ public class Lista2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Menu menu = new Menu();
+        menu.setVisible(true);
     }
     
 }

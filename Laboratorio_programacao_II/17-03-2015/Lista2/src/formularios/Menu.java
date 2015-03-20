@@ -43,7 +43,7 @@ public class Menu extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -55,18 +55,53 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jBEXERCICIO_2.setText("EXERCICIO 2");
+        jBEXERCICIO_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEXERCICIO_2ActionPerformed(evt);
+            }
+        });
 
         jBEXERCICIO_3.setText("EXERCICIO 3");
+        jBEXERCICIO_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEXERCICIO_3ActionPerformed(evt);
+            }
+        });
 
         jBEXERCICIO_4.setText("EXERCICIO 4");
+        jBEXERCICIO_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEXERCICIO_4ActionPerformed(evt);
+            }
+        });
 
         jBEXERCICIO_8.setText("EXERCICIO 8");
+        jBEXERCICIO_8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEXERCICIO_8ActionPerformed(evt);
+            }
+        });
 
         jBEXERCICIO_5.setText("EXERCICIO 5");
+        jBEXERCICIO_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEXERCICIO_5ActionPerformed(evt);
+            }
+        });
 
         jBEXERCICIO_6.setText("EXERCICIO 6");
+        jBEXERCICIO_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEXERCICIO_6ActionPerformed(evt);
+            }
+        });
 
         jBEXERCICIO_7.setText("EXERCICIO 7");
+        jBEXERCICIO_7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEXERCICIO_7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -143,15 +178,44 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBEXERCICIO_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXERCICIO_1ActionPerformed
-        // TODO add your handling code here:
-        
-        //JOptionPane.showMessageDialog(null, "OK");
-        Exercicio1 exercio = new Exercicio1();
-        //exercio.show();
-        exercio.setVisible(true);
-        
-        
+        Exercicio1 exercio = new Exercicio1();        
+        exercio.setVisible(true);        
     }//GEN-LAST:event_jBEXERCICIO_1ActionPerformed
+
+    private void jBEXERCICIO_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXERCICIO_2ActionPerformed
+        Exercicio2 exercio = new Exercicio2();        
+        exercio.setVisible(true);        
+    }//GEN-LAST:event_jBEXERCICIO_2ActionPerformed
+
+    private void jBEXERCICIO_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXERCICIO_3ActionPerformed
+        Exercicio3 exercio = new Exercicio3();        
+        exercio.setVisible(true);
+    }//GEN-LAST:event_jBEXERCICIO_3ActionPerformed
+
+    private void jBEXERCICIO_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXERCICIO_4ActionPerformed
+        Exercicio4 exercio = new Exercicio4();        
+        exercio.setVisible(true);
+    }//GEN-LAST:event_jBEXERCICIO_4ActionPerformed
+
+    private void jBEXERCICIO_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXERCICIO_5ActionPerformed
+        Exercicio5 exercio = new Exercicio5();        
+        exercio.setVisible(true);
+    }//GEN-LAST:event_jBEXERCICIO_5ActionPerformed
+
+    private void jBEXERCICIO_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXERCICIO_6ActionPerformed
+        Exercicio6 exercio = new Exercicio6();        
+        exercio.setVisible(true);
+    }//GEN-LAST:event_jBEXERCICIO_6ActionPerformed
+
+    private void jBEXERCICIO_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXERCICIO_7ActionPerformed
+        Exercicio7 exercio = new Exercicio7();        
+        exercio.setVisible(true);
+    }//GEN-LAST:event_jBEXERCICIO_7ActionPerformed
+
+    private void jBEXERCICIO_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEXERCICIO_8ActionPerformed
+        Exercicio8 exercio = new Exercicio8();        
+        exercio.setVisible(true);
+    }//GEN-LAST:event_jBEXERCICIO_8ActionPerformed
 
     /**
      * @param args the command line arguments

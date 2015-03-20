@@ -37,8 +37,6 @@ public class Exercicio3 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jTextArea1.setColumns(20);
@@ -125,7 +123,7 @@ public class Exercicio3 extends javax.swing.JFrame {
     private void entraNome(){
         nome = new String[10];
         for(int i=0; i <  nome.length; i++){
-           nome[i]=JOptionPane.showInputDialog("DIGITE O NOME "+ String.valueOf(i)+" :");    
+           nome[i]=JOptionPane.showInputDialog("DIGITE O NOME "+ String.valueOf(i+1)+" :");    
         }
         //
     }

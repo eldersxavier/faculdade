@@ -45,8 +45,6 @@ public class Exercicio4 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jLabel1.setText("ADIÇÃO");
 
         jTextArea1.setColumns(20);

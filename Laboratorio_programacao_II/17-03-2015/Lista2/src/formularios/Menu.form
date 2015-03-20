@@ -18,7 +18,7 @@
     </Menu>
   </NonVisualComponents>
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -131,36 +131,57 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="EXERCICIO 2"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEXERCICIO_2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBEXERCICIO_3">
           <Properties>
             <Property name="text" type="java.lang.String" value="EXERCICIO 3"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEXERCICIO_3ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBEXERCICIO_4">
           <Properties>
             <Property name="text" type="java.lang.String" value="EXERCICIO 4"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEXERCICIO_4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBEXERCICIO_8">
           <Properties>
             <Property name="text" type="java.lang.String" value="EXERCICIO 8"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEXERCICIO_8ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBEXERCICIO_5">
           <Properties>
             <Property name="text" type="java.lang.String" value="EXERCICIO 5"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEXERCICIO_5ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBEXERCICIO_6">
           <Properties>
             <Property name="text" type="java.lang.String" value="EXERCICIO 6"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEXERCICIO_6ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBEXERCICIO_7">
           <Properties>
             <Property name="text" type="java.lang.String" value="EXERCICIO 7"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBEXERCICIO_7ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
