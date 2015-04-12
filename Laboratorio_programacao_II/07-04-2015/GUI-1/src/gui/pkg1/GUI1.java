@@ -5,6 +5,8 @@
  */
 package gui.pkg1;
 
+import formularios.Calculadora;
+
 /**
  *
  * @author 1323594
@@ -16,6 +18,9 @@ public class GUI1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Calculadora calc = new Calculadora();
+        calc.setVisible(true);
+        
     }
     
 }
